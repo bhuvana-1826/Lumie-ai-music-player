@@ -1634,11 +1634,11 @@ export default function Page() {
 
   {micMode === "handsfree" && (
     <span className="whitespace-nowrap text-emerald-200">
-      {handsFreeStateText === "Listening"
-        ? "Listening..."
-        : handsFreeStateText === "Speaking"
-        ? "Responding..."
-        : handsFreeStateText}
+      {handsFreeStateText === "Listening for Lumie"
+  ? "Listening..."
+  : handsFreeStateText === "Speaking"
+  ? "Responding..."
+  : handsFreeStateText}
     </span>
   )}
 
@@ -1814,7 +1814,7 @@ export default function Page() {
 
             <button
               type="button"
-              onClick={next}
+              onClick={() => next()}
               disabled={oneTrackOnly}
               className={`rounded-full border p-3 ${
                 oneTrackOnly
